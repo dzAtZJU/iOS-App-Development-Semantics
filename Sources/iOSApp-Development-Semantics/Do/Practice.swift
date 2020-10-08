@@ -23,3 +23,5 @@ struct DeleteFile: DestructiveAction {
 }
 
 struct Git_ResetHard: Prohibit {}
+
+struct Git_Fetch: Practice {}
