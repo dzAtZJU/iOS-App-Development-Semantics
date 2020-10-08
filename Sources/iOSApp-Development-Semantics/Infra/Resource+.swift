@@ -9,3 +9,5 @@
 import Elo
 
 struct Highend_MacbookPro: Resource {}
+
+struct Quick_NetowrkAccess_to_Packages: Resource {}

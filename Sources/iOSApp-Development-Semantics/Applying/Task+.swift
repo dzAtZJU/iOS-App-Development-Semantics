@@ -17,13 +17,6 @@ extension Require_Brain_Body_Condition {
     var isBlocking: Bool { true }
 }
 
-// TODO: 解剖 Debug 過程
-struct Debug: Affect_Throughput, Require_Brain_Body_Condition {
-    var effect: Effect = .Decrease
-    
-    var brain_Body_Condition: Brain_Body_Condition = .Full
-}
-
 struct March_into_NewField: Require_Brain_Body_Condition {
     var brain_Body_Condition: Brain_Body_Condition = .Full
 }
@@ -35,3 +28,17 @@ struct Maintain_Tests: Task, Affect_Throughput {
 struct EndToEnd_Tests: Task, Affect_Throughput {
     var effect: Effect = .Decrease
 }
+
+struct Debug: Affect_Throughput, Require_Brain_Body_Condition {
+    var effect: Effect = .Decrease
+    
+    var brain_Body_Condition: Brain_Body_Condition = .Full
+    
+    var tasks: [Task] = {
+        var tmp = [Task]()
+        tmp.append(Reproduce())
+        return tmp
+    }()
+    struct Reproduce: Task {}
+}
+struct Assumption_and_Experiment: Task {}
