@@ -13,6 +13,9 @@ protocol Require_Brain_Body_Condition {
         get
     }
 }
+extension Require_Brain_Body_Condition {
+    var isBlocking: Bool { true }
+}
 
 // TODO: 解剖 Debug 過程
 struct Debug: Affect_Throughput, Require_Brain_Body_Condition {
