@@ -1,29 +1,34 @@
-//
-//  File.swift
-//  
-//
-//  Created by Zhou Wei Ran on 2020/10/7.
-//
-
-struct Experience_aheadof_Mastery {
-    var items: [String] = {
-        var tmp = [String]()
-        tmp.append("Notification_Threading")
-        tmp.append("CurrentValueSubject_Buffer")
-        tmp.append("Cache and thread-safety")
-        tmp.append("Decide whether is a good or bad study opportunity")
-        tmp.append("束手無策時刻瞎搞")
-        tmp.append("somebody is lying. some concept is fake")
-        tmp.append("package version update")
-        tmp.append("do experiment")
-        tmp.append("collect use cases")
-        tmp.append("dimesnsions: not about code, not about knowledge, not about user interaction, but about time")
-        tmp.append("server 默默地做了一些見不得人的事")
-        tmp.append("server 端的日誌沒有集成進決策層")
-        
-        tmp.append("realm 是自帶 cache 的，我重複寫了")
-        
-        tmp.append("primary key unique across partition")
+import Elo_Itself
+import Elo
+    
+struct Experience_aheadof_Mastery: Approach, Shape_Reality {
+    var content = SeekHelp_from_newApproaches_and_Perspectives()
+    
+    var shapings: [Any] = {
+        var tmp = [Any]()
+        tmp.append(Lurking_Bug())
+        tmp.append(Unknowable_and_Uncertain_Situations())
         return tmp
     }()
+    
+    var constrainedBy: [Tool] = []
+    
+    var legitimacy: String = ""
+    
+    struct Lurking_Bug: To_Manifest {
+        var manifesters: [Task] = {
+            var tmp = [Task]()
+            tmp.append(Self_as_User())
+            return tmp
+        }()
+    }
+    
+    struct Unknowable_and_Uncertain_Situations: Under_Expectation {}
 }
+
+struct SeekHelp_from_newApproaches_and_Perspectives: Approach {
+    var constrainedBy: [Tool] = []
+    
+    var legitimacy: String = ""
+}
+

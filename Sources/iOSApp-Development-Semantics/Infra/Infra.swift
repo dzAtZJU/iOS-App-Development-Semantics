@@ -28,3 +28,7 @@ struct Build: Infra, Affect_Throughput, TimePocket {
         return tmp
     }()
 }
+
+struct LoadingSystem: Infra {}
+
+struct Assumption_and_Experiment: Task {}
