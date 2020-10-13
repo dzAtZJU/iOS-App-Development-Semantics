@@ -35,3 +35,18 @@ protocol Category {
     }
 }
 // Condition -> Category
+
+
+enum 開店: String {
+    case 選址 = ""
+    case 成本 = "租金 VS 受眾圈子的收入水平"
+}
+
+enum Category {
+    case 染髮紋身
+    case Clothes
+}
+
+enum SoundQuality {
+    case Vinyl
+}
