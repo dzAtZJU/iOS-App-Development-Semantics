@@ -32,3 +32,5 @@ struct Build: Infra, Affect_Throughput, TimePocket {
 struct LoadingSystem: Infra {}
 
 struct Assumption_and_Experiment: Task {}
+
+struct Demo_Making: Infra {}

@@ -8,11 +8,6 @@
 import Elo
 import Elo_Itself
 
-struct Conecpts_Prominence: Attribute {
-    var succeed: [Attribute] = []
-    
-    var infra: [Infra] = []
-}
 struct Debug_Friendly: Attribute {
     var succeed: [Attribute] = []
     

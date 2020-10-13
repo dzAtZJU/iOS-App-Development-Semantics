@@ -22,8 +22,6 @@ struct Experience_aheadof_Mastery: Approach, Shape_Reality {
             return tmp
         }()
     }
-    
-    struct Unknowable_and_Uncertain_Situations: Under_Expectation {}
 }
 
 struct SeekHelp_from_newApproaches_and_Perspectives: Approach {
