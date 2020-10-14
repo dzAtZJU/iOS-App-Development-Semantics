@@ -50,3 +50,20 @@ enum Category {
 enum SoundQuality {
     case Vinyl
 }
+
+enum Discovery {
+    case 好東西_to_Place
+    case Profession_to_Place
+    case Place_to_好東西
+    case Place_to_Individual
+    case Individual_to_Cooperation
+}
+
+enum 好東西 {
+    case Discovery
+    case Shortcomings
+}
+
+enum Place {
+    case Discovery
+}
