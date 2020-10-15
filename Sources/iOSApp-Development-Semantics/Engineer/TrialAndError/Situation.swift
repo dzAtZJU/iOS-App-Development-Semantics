@@ -45,7 +45,13 @@ struct Intense_Situation_Crisis: Under_Expectation, Test, Has_AfterTasks {
         return tmp
     }()
     
-    struct DiskBuffer: Task {}
+    struct DiskBuffer: Task {
+        var items: [String] = {
+            var tmp = [String]()
+            tmp.append("兩次談話：餐廳與畫廊")
+            return tmp
+        }()
+    }
     struct Reshape: Task {
         var target = Behavior_and_Cognitive_Pattern()
     }

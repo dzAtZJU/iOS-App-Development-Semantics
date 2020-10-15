@@ -23,3 +23,7 @@ enum Investment {
     case Kickstarter
     case Accelerator_Incubator
 }
+
+// 1. Acknowledge the unfamiliars by its Task, Time, Money
+// 2. Talk about the unfamiliars with friends
+// 3. Experience the unfamiliars
