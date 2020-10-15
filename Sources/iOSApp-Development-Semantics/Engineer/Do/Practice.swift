@@ -25,3 +25,15 @@ struct DeleteFile: DestructiveAction {
 struct Git_ResetHard: Prohibit {}
 
 struct Git_Fetch: Practice {}
+
+struct UI_Adjusting: Practice, Has_Tasks {
+    var tasks: [Task] = {
+        var tmp = [Task]
+        tmp.append(InTestingVC_asRootof_Window)
+        tmp.append(SwiftUI())
+        return tmp
+    }()
+    
+    struct InTestingVC_asRootof_Window: Task {}
+    struct SwiftUI: Task {}
+}

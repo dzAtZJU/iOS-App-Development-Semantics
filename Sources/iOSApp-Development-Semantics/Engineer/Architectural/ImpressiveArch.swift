@@ -19,12 +19,15 @@ struct Iterative: Attribute {
     
     var infra: [Infra] = {
         var tmp = [Infra]()
-        tmp.append(Test_Automation())
         tmp.append(Imprecise_Misleading_Documentation())
         tmp.append(Build())
+        tmp.append(Data_Clearing())
+        tmp.append(Test_Automation())
         tmp.append(Demo_Making())
         return tmp
     }()
+    
+    var practices: [Practice] = [UI_Adjusting()]
     
     var partners: [Partner] = [Testim()]
     

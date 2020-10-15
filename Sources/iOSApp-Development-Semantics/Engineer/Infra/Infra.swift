@@ -34,3 +34,5 @@ struct LoadingSystem: Infra {}
 struct Assumption_and_Experiment: Task {}
 
 struct Demo_Making: Infra {}
+
+struct Data_Clearing: Infra {}

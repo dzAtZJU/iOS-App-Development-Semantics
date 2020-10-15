@@ -6,7 +6,7 @@
 //  Copyright © 2020 Paper Scratch. All rights reserved.
 //
 
-import Elo
+import Elo_Itself
 
 struct Highend_MacbookPro: Resource {}
 

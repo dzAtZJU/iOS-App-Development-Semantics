@@ -68,9 +68,9 @@ enum 開店: String {
     case 成本 = "租金 VS 受眾圈子的收入水平"
 }
 
-struct 染髮紋身: Category {}
-struct Clothes: Category {}
-struct ChatPlace: Category {}
+//struct 染髮紋身: Category {}
+//struct Clothes: Category {}
+//struct ChatPlace: Category {}
 
 enum 好東西 {
     case Discovery
