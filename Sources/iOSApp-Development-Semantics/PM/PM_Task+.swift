@@ -12,9 +12,21 @@ struct Weaving_Ideas_into_System: Task, Require_Immersions, Has_Tasks {
     
     var tasks: [Task] = {
         var tmp = [Task]()
-        tmp.append(BrainStorm_Impression())
+        tmp.append(BrainStorm_Impressions())
+        tmp.append(Organize_Impressions())
+        tmp.append(Way_Of_Project())
         return tmp
     }()
     
-    struct BrainStorm_Impression: Task {}
+    struct BrainStorm_Impressions: Task, Approach {
+        var constrainedBy: [Tool] = [Bear()]
+        
+        var legitimacy = ""
+    }
+    struct Organize_Impressions: Task, Approach {
+        var constrainedBy: [Tool] = [Bear()]
+        
+        var legitimacy = ""
+    }
+    struct Bear: Tool {}
 }
