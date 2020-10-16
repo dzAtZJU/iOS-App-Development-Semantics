@@ -6,7 +6,7 @@
         "repositoryURL": "https://github.com/dzAtZJU/Elo",
         "state": {
           "branch": "main",
-          "revision": "bf4b5e1cc8a409304576082888f060bb8c422fcd",
+          "revision": "0ae78162a10447554fc00fa3865cff2cc35ab192",
           "version": null
         }
       },
@@ -15,7 +15,7 @@
         "repositoryURL": "https://github.com/dzAtZJU/Elo-Itself",
         "state": {
           "branch": "master",
-          "revision": "6b969a3422925186a69495f12488ed6049f7bf0d",
+          "revision": "5a0ccc8faf39b51452b8482f4ee43bd7c36403fa",
           "version": null
         }
       }

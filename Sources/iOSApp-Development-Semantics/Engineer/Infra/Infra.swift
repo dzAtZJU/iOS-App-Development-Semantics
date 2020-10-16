@@ -12,12 +12,13 @@ struct Imprecise_Misleading_Documentation: Infra,  Affect_Throughput {
     var effect: Effect = .Decrease
 }
 
-struct Build: Infra, Affect_Throughput, TimePocket {
+struct Build_and_Install_and_Touch: Infra, Affect_Throughput, TimePocket {
     var effect: Effect = .Decrease
     
     var resources: [Resource] = {
         var tmp = [Resource]()
         tmp.append(Highend_MacbookPro())
+        tmp.append(Quick_LocalNetwork())
         return tmp
     }()
     

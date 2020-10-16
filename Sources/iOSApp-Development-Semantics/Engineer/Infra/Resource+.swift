@@ -10,4 +10,6 @@ import Elo_Itself
 
 struct Highend_MacbookPro: Resource {}
 
+struct Quick_LocalNetwork: Resource {}
+
 struct Quick_NetowrkAccess_to_Packages: Resource {}
