@@ -28,8 +28,8 @@ struct Git_Fetch: Practice {}
 
 struct UI_Adjusting: Practice, Has_Tasks {
     var tasks: [Task] = {
-        var tmp = [Task]
-        tmp.append(InTestingVC_asRootof_Window)
+        var tmp = [Task]()
+        tmp.append(InTestingVC_asRootof_Window())
         tmp.append(SwiftUI())
         return tmp
     }()
