@@ -20,6 +20,7 @@ struct Iterative: Attribute {
     var infra: [Infra] = {
         var tmp = [Infra]()
         tmp.append(Imprecise_Misleading_Documentation())
+        tmp.append(LeastIntervention_ThirdPartyLibrary())
         tmp.append(Build())
         tmp.append(Data_Clearing())
         tmp.append(Test_Automation())
@@ -27,11 +28,13 @@ struct Iterative: Attribute {
         return tmp
     }()
     
-    var practices: [Practice] = [UI_Adjusting()]
+    var practices: [Practice] = [UF_UR_Adjusting()]
     
     var partners: [Partner] = [Testim()]
     
     struct Test_Automation: Infra {}
+    
+    struct LeastIntervention_ThirdPartyLibrary: Infra {}
     
     struct Testim: Partner {}
 }

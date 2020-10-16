@@ -26,7 +26,7 @@ struct Git_ResetHard: Prohibit {}
 
 struct Git_Fetch: Practice {}
 
-struct UI_Adjusting: Practice, Has_Tasks {
+struct UF_UR_Adjusting: Practice, Has_Tasks {
     var tasks: [Task] = {
         var tmp = [Task]()
         tmp.append(InTestingVC_asRootof_Window())
