@@ -28,13 +28,43 @@ struct ImplementFeature: Task, Has_Tasks {
         return tmp
     }()
     
-    struct Implement_UF_UR_UX_Solution: Task, Require_Infras, Require_Attributes {
+    struct Implement_UF_UR_UX_Solution: Task, Require_Infras, Require_Attributes, Has_Tasks {
         var attributes: [Attribute] = [Launch()]
         
         var infras: [Infra] = [Build_and_Install_and_Touch()]
+        
+        var tasks: [Task] = {
+            var tmp = [Task]()
+            tmp.append(Implement_UF())
+            tmp.append(Implement_UR())
+            return tmp
+        }()
+        
+        struct Implement_UF: Task {}
+        struct Implement_UR: Task {}
+        
+        var items: [String] = {
+            var tmp = [String]()
+            tmp.append("Notification_Threading")
+            tmp.append("CurrentValueSubject_Buffer")
+            tmp.append("Realm: primary key should be unique across partitions")
+            tmp.append("notification comes before viewDidLoad")
+            tmp.append("becomeFirstResponder called before view added to hierarchy")
+            
+            tmp.append("server 默默地做了一些見不得人的事")
+            tmp.append("server 端的日誌沒有集成進決策層")
+            
+            return tmp
+        }()
     }
     struct Revise_PersistentDataModel: Task {}
-    struct UI_PersistentDataModel_Binding: Task {}
+    struct UI_PersistentDataModel_Binding: Task {
+        var items: [String] = {
+            var tmp = [String]()
+            tmp.append("Business Logic")
+            return tmp
+        }()
+    }
     struct Maintain_Tests: Task, Affect_Throughput {
         var effect: Effect = .Decrease
     }
@@ -72,15 +102,3 @@ struct Debug: Affect_Throughput, Require_Brain_Body_Condition, Has_Tasks {
 }
 
 struct Self_as_User: Task {}
-
-var items: [String] = {
-    var tmp = [String]()
-    tmp.append("Notification_Threading")
-    tmp.append("CurrentValueSubject_Buffer")
-    tmp.append("Realm: primary key should be unique across partitions")
-    
-    tmp.append("server 默默地做了一些見不得人的事")
-    tmp.append("server 端的日誌沒有集成進決策層")
-    
-    return tmp
-}()
