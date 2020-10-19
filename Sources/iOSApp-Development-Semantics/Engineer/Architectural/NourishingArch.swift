@@ -40,3 +40,25 @@ struct Debug_Friendly: Attribute {
     // Locating Precision
     // Why
 }
+
+struct Testability: Attribute {
+    var succeed: [Attribute] = []
+    
+    var infra: [Infra] = {
+        var tmp = [Infra]()
+        tmp.append(View_Reusable())
+        tmp.append(Concepts_Layering())
+        return tmp
+    }()
+    
+    struct View_Reusable: Infra {}
+    
+    struct Concepts_Layering: Infra {
+        var items: [String] = {
+            var tmp = [String]()
+            tmp.append("Between View and ViewModel")
+            tmp.append("Between ViewModel and Model")
+            return tmp
+        }()
+    }
+}

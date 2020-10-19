@@ -15,7 +15,7 @@ struct Innovative: Attribute {
 }
 
 struct Iterative: Attribute {
-    var succeed: [Attribute] = [Concepts_Prominence(), Debug_Friendly()]
+    var succeed: [Attribute] = [Concepts_Prominence(), Debug_Friendly(), Testability()]
     
     var infra: [Infra] = {
         var tmp = [Infra]()
@@ -27,8 +27,6 @@ struct Iterative: Attribute {
         tmp.append(Demo_Making())
         return tmp
     }()
-    
-    var practices: [Practice] = [UF_UR_Adjusting()]
     
     var partners: [Partner] = [Testim()]
     

@@ -16,19 +16,23 @@ protocol Require_Brain_Body_Condition {
 extension Require_Brain_Body_Condition {
     var isBlocking: Bool { true }
 }
+protocol Require_Insight_and_Mastery {}
 
-struct ImplementFeature: Task, Has_Tasks {
+struct ImplementFeature: Task, Has_Tasks, Require_Attributes {
+    var attributes: [Attribute] = [Iterative()]
+    
     var tasks: [Task] = {
         var tmp = [Task]()
-        tmp.append(Implement_UF_UR_UX_Solution())
+        tmp.append(Implement_UF_UR_Solution())
         tmp.append(Revise_PersistentDataModel())
         tmp.append(UI_PersistentDataModel_Binding())
+        tmp.append(UX_Tuning())
         tmp.append(Maintain_Tests())
         tmp.append(EndToEnd_Tests())
         return tmp
     }()
     
-    struct Implement_UF_UR_UX_Solution: Task, Require_Infras, Require_Attributes, Has_Tasks {
+    struct Implement_UF_UR_Solution: Task, Require_Infras, Require_Attributes, Has_Tasks {
         var attributes: [Attribute] = [Launch()]
         
         var infras: [Infra] = [Build_and_Install_and_Touch()]
@@ -37,11 +41,18 @@ struct ImplementFeature: Task, Has_Tasks {
             var tmp = [Task]()
             tmp.append(Implement_UF())
             tmp.append(Implement_UR())
+            tmp.append(UF_UR_Adjusting())
             return tmp
         }()
         
         struct Implement_UF: Task {}
         struct Implement_UR: Task {}
+        struct UF_UR_Adjusting: Task, Require_Infras {
+            var infras: [Infra] = [InTestingVC_asRootof_Window(), SwiftUI()]
+            
+            struct InTestingVC_asRootof_Window: Infra {}
+            struct SwiftUI: Infra {}
+        }
         
         var items: [String] = {
             var tmp = [String]()
@@ -64,6 +75,9 @@ struct ImplementFeature: Task, Has_Tasks {
             tmp.append("Business Logic")
             return tmp
         }()
+    }
+    struct UX_Tuning: Task, Require_Brain_Body_Condition, Require_Insight_and_Mastery {
+        var brain_Body_Condition: Brain_Body_Condition = .Full
     }
     struct Maintain_Tests: Task, Affect_Throughput {
         var effect: Effect = .Decrease
