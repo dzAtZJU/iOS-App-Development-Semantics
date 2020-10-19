@@ -61,6 +61,9 @@ struct ImplementFeature: Task, Has_Tasks, Require_Attributes {
             tmp.append("Realm: primary key should be unique across partitions")
             tmp.append("notification comes before viewDidLoad")
             tmp.append("becomeFirstResponder called before view added to hierarchy")
+            tmp.append("Animation Synchronization")
+            tmp.append("Completion called multiple times")
+            tmp.append("Animation and Threading")
             
             tmp.append("server 默默地做了一些見不得人的事")
             tmp.append("server 端的日誌沒有集成進決策層")
@@ -87,10 +90,6 @@ struct ImplementFeature: Task, Has_Tasks, Require_Attributes {
     }
 }
 
-struct March_into_NewField: Require_Brain_Body_Condition {
-    var brain_Body_Condition: Brain_Body_Condition = .Full
-}
-
 struct Debug: Affect_Throughput, Require_Brain_Body_Condition, Has_Tasks {
     var effect: Effect = .Decrease
     
@@ -115,4 +114,18 @@ struct Debug: Affect_Throughput, Require_Brain_Body_Condition, Has_Tasks {
     struct Timing: Perspective {}
 }
 
+struct Regulate_Conflict_between_Framework: Task, Require_Insight_and_Mastery, Has_Tasks {
+    var tasks: [Task] = [Replace_One_It_Not_Resolvable()]
+    
+    struct Replace_One_It_Not_Resolvable: Task, Require_Insight_and_Mastery {}
+}
+
+struct Step_into_FrameworkCode: Task, Require_Brain_Body_Condition {
+    var brain_Body_Condition: Brain_Body_Condition = .Full
+}
+
 struct Self_as_User: Task {}
+
+struct March_into_NewField: Require_Brain_Body_Condition {
+    var brain_Body_Condition: Brain_Body_Condition = .Full
+}

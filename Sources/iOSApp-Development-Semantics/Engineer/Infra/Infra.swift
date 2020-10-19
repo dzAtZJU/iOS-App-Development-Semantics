@@ -8,10 +8,6 @@
 import Elo_Itself
 import Elo
 
-struct Imprecise_Misleading_Documentation: Infra,  Affect_Throughput {
-    var effect: Effect = .Decrease
-}
-
 struct Build_and_Install_and_Touch: Infra, Affect_Throughput, TimePocket {
     var effect: Effect = .Decrease
     

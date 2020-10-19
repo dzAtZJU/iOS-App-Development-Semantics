@@ -19,8 +19,8 @@ struct Iterative: Attribute {
     
     var infra: [Infra] = {
         var tmp = [Infra]()
-        tmp.append(Imprecise_Misleading_Documentation())
-        tmp.append(LeastIntervention_ThirdPartyLibrary())
+        tmp.append(Documentation_and_QACommunity())
+        tmp.append(ThirdParty_or_System_Framework())
         tmp.append(Build_and_Install_and_Touch())
         tmp.append(Data_Clearing())
         tmp.append(Test_Automation())
@@ -30,9 +30,36 @@ struct Iterative: Attribute {
     
     var partners: [Partner] = [Testim()]
     
-    struct Test_Automation: Infra {}
+    struct Documentation_and_QACommunity: Infra, Has_Criterias {
+        var criterias: [Any] = {
+            var tmp = [String]()
+            tmp.append("Least Imprecise")
+            tmp.append("Least Misleading")
+            tmp.append("Completeness")
+            return tmp
+        }()
+    }
     
-    struct LeastIntervention_ThirdPartyLibrary: Infra {}
+    struct ThirdParty_or_System_Framework: Infra, Has_Criterias, Require_Infras {
+        var criterias: [Any] = {
+            var tmp = [String]()
+            tmp.append("Least Intervention and Forcing in any possible context")
+            tmp.append("Compatible and Co-Functional with each other")
+            return tmp
+        }()
+        
+        var infras: [Infra] = {
+            var tmp = [Infra]()
+            tmp.append(ChangeLog())
+            tmp.append(KnownIssue())
+            return tmp
+        }()
+        
+        struct ChangeLog: Infra {}
+        struct KnownIssue: Infra {}
+    }
+    
+    struct Test_Automation: Infra {}
     
     struct Testim: Partner {}
 }
