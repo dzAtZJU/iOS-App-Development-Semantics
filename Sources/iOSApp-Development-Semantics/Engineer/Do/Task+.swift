@@ -124,6 +124,10 @@ struct Step_into_FrameworkCode: Task, Require_Brain_Body_Condition {
     var brain_Body_Condition: Brain_Body_Condition = .Full
 }
 
+struct Post_Question_or_Bug: Task, Affect_Throughput {
+    var effect: Effect = .Decrease
+}
+
 struct Self_as_User: Task {}
 
 struct March_into_NewField: Require_Brain_Body_Condition {

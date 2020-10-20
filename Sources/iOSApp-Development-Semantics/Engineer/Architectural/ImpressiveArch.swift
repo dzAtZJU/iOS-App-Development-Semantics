@@ -51,12 +51,14 @@ struct Iterative: Attribute {
         var infras: [Infra] = {
             var tmp = [Infra]()
             tmp.append(ChangeLog())
-            tmp.append(KnownIssue())
+            tmp.append(KnownIssues())
+            tmp.append(WorkingDemo())
             return tmp
         }()
         
         struct ChangeLog: Infra {}
-        struct KnownIssue: Infra {}
+        struct KnownIssues: Infra {}
+        struct WorkingDemo: Infra {}
     }
     
     struct Test_Automation: Infra {}
