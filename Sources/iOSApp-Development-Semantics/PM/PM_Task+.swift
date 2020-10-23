@@ -30,3 +30,5 @@ struct Weaving_Ideas_into_System: Task, Require_Immersions, Has_Tasks {
     }
     struct Bear: Tool {}
 }
+
+struct Incorporate_Immediate_LifeIdea: Task {}

@@ -49,6 +49,7 @@ struct Intense_Situation_Crisis: Under_Expectation, Test, Has_AfterTasks {
         var items: [String] = {
             var tmp = [String]()
             tmp.append("兩次談話：餐廳與畫廊")
+            tmp.append("夜晚氣氛尷尬躲衛生間，華山路夜散步，蘇荷小哥，Repeeat build trust，輕視了對方導致溝通獲得的信息本可以更多，自媒體的評論管理，老陳的 custom interview")
             return tmp
         }()
     }

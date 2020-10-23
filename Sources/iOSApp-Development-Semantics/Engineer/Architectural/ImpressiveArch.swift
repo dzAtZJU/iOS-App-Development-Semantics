@@ -30,16 +30,6 @@ struct Iterative: Attribute {
     
     var partners: [Partner] = [Testim()]
     
-    struct Documentation_and_QACommunity: Infra, Has_Criterias {
-        var criterias: [Any] = {
-            var tmp = [String]()
-            tmp.append("Least Imprecise")
-            tmp.append("Least Misleading")
-            tmp.append("Completeness")
-            return tmp
-        }()
-    }
-    
     struct ThirdParty_or_System_Framework: Infra, Has_Criterias, Require_Infras {
         var criterias: [Any] = {
             var tmp = [String]()

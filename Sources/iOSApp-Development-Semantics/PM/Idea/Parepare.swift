@@ -15,23 +15,6 @@ struct ConditionsForCategory {
     var conditions: [ID]
 }
 
-enum Action {
-    enum Condition {
-        enum User {
-            enum Public {
-                case Search_Or_Insert
-                case Discover
-            }
-            enum Private {
-                case Add_to_Category
-            }
-        }
-        enum BigData {
-            case Condition_Becomes_Category
-        }
-    }
-}
-
 enum SoundQuality {
     case Vinyl
 }
@@ -62,6 +45,10 @@ enum Discovery {
     case Place_to_Event
     case Event_to_Place
 }
+enum 好東西 {
+    case Discovery
+    case Shortcomings
+}
 
 enum 開店: String {
     case 選址 = ""
@@ -72,11 +59,3 @@ enum 開店: String {
 //struct Clothes: Category {}
 //struct ChatPlace: Category {}
 
-enum 好東西 {
-    case Discovery
-    case Shortcomings
-}
-
-enum Place {
-    case Discovery
-}

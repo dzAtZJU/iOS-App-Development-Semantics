@@ -18,8 +18,10 @@ extension Require_Brain_Body_Condition {
 }
 protocol Require_Insight_and_Mastery {}
 
-struct ImplementFeature: Task, Has_Tasks, Require_Attributes {
+struct ImplementFeature: Task, Has_Tasks, Require_Attributes, Require_Infras {
     var attributes: [Attribute] = [Iterative()]
+    
+    var infras: [Infra] = [Community_ImplementingFeature()]
     
     var tasks: [Task] = {
         var tmp = [Task]()
@@ -31,6 +33,8 @@ struct ImplementFeature: Task, Has_Tasks, Require_Attributes {
         tmp.append(EndToEnd_Tests())
         return tmp
     }()
+    
+    struct Community_ImplementingFeature: Infra {}
     
     struct Implement_UF_UR_Solution: Task, Require_Infras, Require_Attributes, Has_Tasks {
         var attributes: [Attribute] = [Launch()]

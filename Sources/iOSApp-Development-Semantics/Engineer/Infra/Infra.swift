@@ -8,6 +8,16 @@
 import Elo_Itself
 import Elo
 
+struct Documentation_and_QACommunity: Infra, Has_Criterias {
+    var criterias: [Any] = {
+        var tmp = [String]()
+        tmp.append("Least Imprecise")
+        tmp.append("Least Misleading")
+        tmp.append("Completeness")
+        return tmp
+    }()
+}
+
 struct Build_and_Install_and_Touch: Infra, Affect_Throughput, TimePocket {
     var effect: Effect = .Decrease
     
@@ -33,3 +43,8 @@ struct Assumption_and_Experiment: Task {}
 struct Demo_Making: Infra {}
 
 struct Data_Clearing: Infra {}
+
+// MARK: ParePare
+
+struct DiversityRequired_Clustering: Infra {}
+struct Support_Search_Place_with_MultiLanguage: Infra {}
