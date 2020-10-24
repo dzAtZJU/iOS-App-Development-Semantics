@@ -104,7 +104,7 @@ struct Debug: Affect_Throughput, Require_Brain_Body_Condition, Has_Tasks {
         tmp.append(Reproduce())
         tmp.append(Semantic_Discrimination(perspectives: [Code(), Knowledge()]))
         tmp.append(Update_Dependencies())
-        tmp.append(Experiment(tasks: [Shrinking()], perspectives: [User_Operations(), Timing()]))
+        tmp.append(Experiment(tasks: [Shrinking()], perspectives: [User_Operations(), Sustem_Runtime_Timing()]))
         return tmp
     }()
     struct Reproduce: Task {}
@@ -115,7 +115,7 @@ struct Debug: Affect_Throughput, Require_Brain_Body_Condition, Has_Tasks {
     
     struct Shrinking: Task {}
     struct User_Operations: Perspective {}
-    struct Timing: Perspective {}
+    struct Sustem_Runtime_Timing: Perspective, Timing {}
 }
 
 struct Regulate_Conflict_between_Framework: Task, Require_Insight_and_Mastery, Has_Tasks {
