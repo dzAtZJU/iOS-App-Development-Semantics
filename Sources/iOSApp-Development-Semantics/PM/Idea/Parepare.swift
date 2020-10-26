@@ -59,3 +59,19 @@ enum 開店: String {
 //struct Clothes: Category {}
 //struct ChatPlace: Category {}
 
+let the_sami = ["https://www.visitfinland.com/zh/wen-zhang/song_bi_yi_zhi_sa_mi_ren_yao_gun_yue_dui/", "https://www.youtube.com/watch?v=bN8QEsZsUiw"]
+struct Feeling {
+    static let spring = ["swan", "meanwhile-in-finland"]
+    static let summer = ["out-of-office", "pesapallo", "white-nights", "kokko", "lavatanssit"]
+    static let winter = ["stuck", "kaamos", "bear", "aurora-borealis", "christmas-party"]
+}
+let Nurturing = ["association", "education", "the-cap", "baby-in-a-box", "moominmamma", "girlpower", "forest"]
+
+let Temper = ["a-trusted-friend", "sisu", "kalsarikannit", "the-handshake", "iceman", "unbreakable", "perkele", "finnish-love", "suomimainittu", "busstop", "KICKSLED"]
+let Comapre = ["nordic-family", "happiness", "lost-hopes", ]
+let Activity = ["aland-islands", "cross-country-skiing", "saunawhisk", "sauna-whisk", "fourseasonsofbbq", "sauna"]
+let Animal = ["pusa-hispida-saimensis", "reindeer"]
+let Profession = ["tom-of-finland", "the-voice", "the-conductor", "the-king", "matti-nykanen", "peacemaker"]
+let Industry = ["icebreaker"]
+let Fashion = ["fashionista-finns", "woolly-socks", "headbanger"]
+let food_drink = ["superfood", "black-gold", "joulutorttu", "karjalanpiirakka", "cup-of-coffee"]
