@@ -34,7 +34,15 @@ struct ImplementFeature: Task, Has_Tasks, Require_Attributes, Require_Infras {
         return tmp
     }()
     
-    struct Community_ImplementingFeature: Infra {}
+    struct Community_ImplementingFeature: Infra {
+        var resources: [Resource] = {
+            var tmp = [Resource]()
+            tmp.append(iosexample())
+            return tmp
+        }()
+        
+        struct iosexample: Resource {}
+    }
     
     struct Implement_UF_UR_Solution: Task, Require_Infras, Require_Attributes, Has_Tasks {
         var attributes: [Attribute] = [Launch()]
