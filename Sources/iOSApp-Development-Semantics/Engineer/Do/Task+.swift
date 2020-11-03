@@ -25,7 +25,7 @@ struct ImplementFeature: Task, Has_Tasks, Require_Attributes, Require_Infras {
     
     var tasks: [Task] = {
         var tmp = [Task]()
-        tmp.append(Implement_UF_UR_Solution())
+        tmp.append(Implement_UR())
         tmp.append(Revise_PersistentDataModel())
         tmp.append(UI_PersistentDataModel_Binding())
         tmp.append(UX_Tuning())
@@ -44,27 +44,10 @@ struct ImplementFeature: Task, Has_Tasks, Require_Attributes, Require_Infras {
         struct iosexample: Resource {}
     }
     
-    struct Implement_UF_UR_Solution: Task, Require_Infras, Require_Attributes, Has_Tasks {
+    struct Implement_UR: Task, Require_Infras, Require_Attributes, Has_Tasks {
         var attributes: [Attribute] = [Launch()]
         
         var infras: [Infra] = [Build_and_Install_and_Touch()]
-        
-        var tasks: [Task] = {
-            var tmp = [Task]()
-            tmp.append(Implement_UF())
-            tmp.append(Implement_UR())
-            tmp.append(UF_UR_Adjusting())
-            return tmp
-        }()
-        
-        struct Implement_UF: Task {}
-        struct Implement_UR: Task {}
-        struct UF_UR_Adjusting: Task, Require_Infras {
-            var infras: [Infra] = [InTestingVC_asRootof_Window(), SwiftUI()]
-            
-            struct InTestingVC_asRootof_Window: Infra {}
-            struct SwiftUI: Infra {}
-        }
         
         var items: [String] = {
             var tmp = [String]()
@@ -83,6 +66,7 @@ struct ImplementFeature: Task, Has_Tasks, Require_Attributes, Require_Infras {
             return tmp
         }()
     }
+    
     struct Revise_PersistentDataModel: Task {}
     struct UI_PersistentDataModel_Binding: Task {
         var items: [String] = {

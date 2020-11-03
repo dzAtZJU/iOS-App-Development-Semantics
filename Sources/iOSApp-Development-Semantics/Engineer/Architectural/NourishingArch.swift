@@ -41,7 +41,13 @@ struct Debug_Friendly: Attribute {
     // Why
 }
 
-struct Testability: Attribute {
+struct Extensibility: Attribute {
+    var succeed: [Attribute] = []
+    
+    var infra: [Infra] = []
+}
+
+struct Maintainability: Attribute {
     var succeed: [Attribute] = []
     
     var infra: [Infra] = {

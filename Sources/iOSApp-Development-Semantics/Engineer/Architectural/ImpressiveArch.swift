@@ -15,7 +15,7 @@ struct Innovative: Attribute {
 }
 
 struct Iterative: Attribute {
-    var succeed: [Attribute] = [Concepts_Prominence(), Debug_Friendly(), Testability()]
+    var succeed: [Attribute] = [Concepts_Prominence(), Debug_Friendly(), Maintainability(), Extensibility()]
     
     var infra: [Infra] = {
         var tmp = [Infra]()
@@ -35,6 +35,7 @@ struct Iterative: Attribute {
             var tmp = [String]()
             tmp.append("Least Intervention and Forcing in any possible context")
             tmp.append("Compatible and Co-Functional with each other")
+            tmp.append("Customizable")
             return tmp
         }()
         

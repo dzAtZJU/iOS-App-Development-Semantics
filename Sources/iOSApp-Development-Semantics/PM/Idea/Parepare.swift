@@ -80,24 +80,35 @@ struct LinkStructure {
 
 let the_sami = ["https://www.visitfinland.com/zh/wen-zhang/song_bi_yi_zhi_sa_mi_ren_yao_gun_yue_dui/", "https://www.youtube.com/watch?v=bN8QEsZsUiw"]
 
-struct Feeling_Seasons {
+protocol Period {}
+
+protocol Moment {}
+
+struct Seasons: Period {
     static let spring = ["swan"]
     static let summer = ["out-of-office", "white-nights", "kokko", "lavatanssit"]
     static let winter = ["stuck", "kaamos", "bear", "christmas-party"]
 }
 
+struct Scenery: Moment {
+    static let Nature = ["aurora-borealis", "pusa-hispida-saimensis", "reindeer"]
+}
+
+
+let Fashion = ["fashionista-finns", "woolly-socks", "headbanger"]
+let food_drink = ["superfood", "black-gold", "joulutorttu", "karjalanpiirakka", "cup-of-coffee"]
+let Activity = ["aland-islands", "cross-country-skiing", "saunawhisk", "fourseasonsofbbq", "sauna"]
+
+
+
+
+
 let Nurturing = ["baby-in-a-box", "moominmamma", "education", "association", "girlpower", "forest"]
 
-let Feeling_Life = ["pesapallo", "the-cap"]
+let Life = ["pesapallo", "the-cap"]
 
 let Temper = ["a-trusted-friend", "sisu", "unbreakable", "suomimainittu", "busstop"]
 
 let Relationships = ["kalsarikannit", "iceman", "perkele", "the-handshake", "finnish-love"]
 
 let Country = ["nordic-family", "happiness", "lost-hopes"]
-
-let Fashion = ["fashionista-finns", "woolly-socks", "headbanger"]
-let food_drink = ["superfood", "black-gold", "joulutorttu", "karjalanpiirakka", "cup-of-coffee"]
-let Nature = ["aurora-borealis", "pusa-hispida-saimensis", "reindeer"]
-let Activity = ["aland-islands", "cross-country-skiing", "saunawhisk", "fourseasonsofbbq", "sauna"]
-
