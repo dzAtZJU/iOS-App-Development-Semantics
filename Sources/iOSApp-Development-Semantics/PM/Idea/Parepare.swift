@@ -73,7 +73,7 @@ enum 字典 {
 
 struct LinkStructure {
     let a = "Indented-List"
-    let b = "[-][--][---][-]"
+    let b = "---]"
     let c = "Water-Fish"
     let d = "Set"
 }
