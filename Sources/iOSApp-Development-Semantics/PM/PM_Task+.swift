@@ -28,7 +28,6 @@ struct Weaving_Ideas_into_System: Task, Require_Immersions, Has_Tasks {
         
         var legitimacy = ""
     }
-    struct Bear: Tool {}
 }
 
 struct Incorporate_Immediate_LifeIdea: Task {}

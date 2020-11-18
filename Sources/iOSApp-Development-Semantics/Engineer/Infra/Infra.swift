@@ -47,4 +47,3 @@ struct Data_Clearing: Infra {}
 // MARK: ParePare
 
 struct DiversityRequired_Clustering: Infra {}
-struct Support_Search_Place_with_MultiLanguage: Infra {}
