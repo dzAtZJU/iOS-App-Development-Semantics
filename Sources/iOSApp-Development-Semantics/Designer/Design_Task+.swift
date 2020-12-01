@@ -6,6 +6,7 @@ struct Identify_UF_UR_UX_Solution: Require_Attributes, Require_Infras, Affect_Th
     var infras: [Infra] = [Build_and_Install_and_Touch(), InTestingVC_asRootof_Window(), SwiftUI()]
     
     var resources: [Resource] = [
+        Mobbin(),
         平行世界(),
         Photos(),
         Things(),
@@ -26,5 +27,7 @@ struct Identify_UF_UR_UX_Solution: Require_Attributes, Require_Infras, Affect_Th
     
     struct Convenient_UR: Task {}
     struct Spacious_UI: Task {}
+    
+    struct Mobbin: Resource {}
 }
 
