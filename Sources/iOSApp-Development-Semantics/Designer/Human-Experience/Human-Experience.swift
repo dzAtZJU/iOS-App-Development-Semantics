@@ -9,9 +9,17 @@ extension protocol HumanExperience {
     }
 }
 
-struct Choose: HumanExperience {
-    
+struct Meaning: HumanExperience {
+    var appHanlder: String? {
+        [
+            "Glyph Title"
+        ]
+    }
 }
+
+struct Scanning: HumanExperience {}
+
+struct Choose: HumanExperience {}
 
 struct WaitingAndGauge: HumanExperience {
     var appHanlder: String? {

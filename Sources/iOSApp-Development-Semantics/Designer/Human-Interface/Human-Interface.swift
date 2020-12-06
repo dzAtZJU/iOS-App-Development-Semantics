@@ -1,34 +1,22 @@
 enum HumanInterface {
-    case Items
-}
-
-protocol UIComponent {
-    var componentsCausingSpecialAppearance: [UIComponent]?
-    
-    var requireCustomizingAppearance: Bool
-}
-
-extension UIComponent {
-    var componentsCausingSpecialAppearance: [UIComponent] {
-        nil
+    enum Items {
+        case Arrangement
+        case Separate
+        case Hidden
     }
     
-    var requireCustomizingAppearance: Bool {
-        false
+    enum Item {
+        enum Transition {
+            
+        }
+        
+        enum Layout {
+            case Items
+        }
+        
+        enum Interfere {
+            case Near
+            case Dim
+        }
     }
 }
-
-struct ProgressBar: UIComponent {
-    var componentsCausingSpecialAppearance: [UIComponent] {
-        [NavigationBar(), Toolbar()]
-    }
-    
-    var requireCustomizingAppearance: Bool {
-        true
-    }
-}
-
-struct NavigationBar: UIComponent {}
-
-struct Toolbar: UIComponent {}
-
