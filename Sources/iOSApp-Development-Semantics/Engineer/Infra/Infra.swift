@@ -18,6 +18,7 @@ struct Build_and_Install_and_Touch: Infra, Affect_Throughput, TimePocket {
         var tmp = [Resource]()
         tmp.append(Highend_MacbookPro())
         tmp.append(Quick_LocalNetwork())
+        tmp.append(Docs())
         return tmp
     }()
     
@@ -27,6 +28,13 @@ struct Build_and_Install_and_Touch: Infra, Affect_Throughput, TimePocket {
         tmp.append(Duolingo())
         return tmp
     }()
+    
+    struct Docs: Resource {
+        let items = [
+            "https://pewpewthespells.com/blog/buildsettings.html",
+            "https://dnbespalov.com/2019/02/17/xcode-target-dependencies.html"
+        ]
+    }
 }
 
 struct LoadingSystem: Infra {}
