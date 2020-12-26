@@ -31,6 +31,7 @@ struct Build_and_Install_and_Touch: Infra, Affect_Throughput, TimePocket {
     
     struct Docs: Resource {
         let items = [
+            "https://help.apple.com/xcode/mac/11.4/",
             "https://pewpewthespells.com/blog/buildsettings.html",
             "https://dnbespalov.com/2019/02/17/xcode-target-dependencies.html"
         ]
