@@ -1,3 +1,5 @@
+// New-Generation Social Network: Elo
+
 struct Condition {
     let partitionKey = "public"
 }
