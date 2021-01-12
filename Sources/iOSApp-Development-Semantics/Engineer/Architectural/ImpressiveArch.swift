@@ -9,7 +9,13 @@ struct Innovative: Attribute {
 }
 
 struct Iterative: Attribute {
-    var succeed: [Attribute] = [Concepts_Prominence(), Debug_Friendly(), Maintainability(), Extensibility()]
+    var succeed: [Attribute] = [
+        Concepts_Prominence(),
+        Debug_Friendly(),
+        Maintainability(),
+        Extensibility(),
+        TaskPerfection()
+    ]
     
     var infra: [Infra] = {
         var tmp = [Infra]()

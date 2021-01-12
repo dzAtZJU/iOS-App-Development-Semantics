@@ -35,6 +35,8 @@ extension Situation {
 
 protocol Test {}
 
+struct MisUse: Under_Expectation {}
+
 struct Intense_Situation_Crisis: Under_Expectation, Test, Has_AfterTasks {
     var afterTasks: [Task] = {
         var tmp = [Task]()

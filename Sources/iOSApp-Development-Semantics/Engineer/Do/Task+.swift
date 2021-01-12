@@ -1,10 +1,3 @@
-//
-//  Task+.swift
-//  iOS-App-Development-Semantics
-//
-//  Created by Zhou Wei Ran on 2020/10/6.
-//  Copyright © 2020 Paper Scratch. All rights reserved.
-//
 import Elo
 import Elo_Itself
 
@@ -86,7 +79,13 @@ struct ImplementFeature: Task, Has_Tasks, Require_Attributes, Require_Infras {
     }
 }
 
-struct Debug: Affect_Throughput, Require_Brain_Body_Condition, Has_Tasks {
+struct Debug: Task, Affect_Throughput, Require_Brain_Body_Condition, Has_Tasks {
+    var resources: [Resource] {
+        [
+            Charles()
+        ]
+    }
+    
     var effect: Effect = .Decrease
     
     var brain_Body_Condition: Brain_Body_Condition = .Full
@@ -96,7 +95,7 @@ struct Debug: Affect_Throughput, Require_Brain_Body_Condition, Has_Tasks {
         tmp.append(Reproduce())
         tmp.append(Semantic_Discrimination(perspectives: [Code(), Knowledge()]))
         tmp.append(Update_Dependencies())
-        tmp.append(Experiment(tasks: [Shrinking()], perspectives: [User_Operations(), Sustem_Runtime_Timing()]))
+        tmp.append(Experiment(tasks: [Shrinking()], perspectives: [User_Operations(), System_Runtime_Timing()]))
         return tmp
     }()
     struct Reproduce: Task {}
@@ -107,7 +106,7 @@ struct Debug: Affect_Throughput, Require_Brain_Body_Condition, Has_Tasks {
     
     struct Shrinking: Task {}
     struct User_Operations: Perspective {}
-    struct Sustem_Runtime_Timing: Perspective, Timing {}
+    struct System_Runtime_Timing: Perspective {}
 }
 
 struct Regulate_Conflict_between_Framework: Task, Require_Insight_and_Mastery, Has_Tasks {
@@ -128,4 +127,19 @@ struct Self_as_User: Task {}
 
 struct March_into_NewField: Require_Brain_Body_Condition {
     var brain_Body_Condition: Brain_Body_Condition = .Full
+}
+
+struct Analyse: Task {
+    var criterias: [Criteria] {
+        [
+            Cost.Time,
+            Cost.Efforts
+        ]
+    }
+    
+    var resources: [Resource] {
+        [
+            Python_and_Matlab()
+        ]
+    }
 }

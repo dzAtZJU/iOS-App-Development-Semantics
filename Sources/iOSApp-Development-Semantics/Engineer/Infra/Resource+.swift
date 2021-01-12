@@ -24,3 +24,7 @@ struct Release_Apple: Resource {
         return tmp
     }()
 }
+
+struct Charles: Tool {}
+
+struct Python_and_Matlab: Tool {}
