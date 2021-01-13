@@ -2,6 +2,8 @@ import Elo_Itself
 
 struct Highend_MacbookPro: Resource {}
 
+struct SavedDesignatedSitesForSearching: Resource {}
+
 struct Quick_LocalNetwork: Resource {}
 
 struct Quick_NetowrkAccess_to_Packages: Resource {}
@@ -12,6 +14,9 @@ struct Docs_Apple: Resource {
         tmp["Interface Guideline"] = ["https://developer.apple.com/design/human-interface-guidelines/ios/overview/themes/"]
         tmp["Developer Account"] = ["https://help.apple.com/developer-account"]
         tmp["SPM"] = ["https://docs.swift.org/package-manager/PackageDescription/PackageDescription.html", "https://github.com/apple/swift-package-manager/blob/main/Documentation/Usage.md", "https://clang.llvm.org/docs/Modules.html"]
+        tmp["Archive"] = [
+            "https://developer.apple.com/library/archive/navigation/"
+        ]
         return tmp
     }()
 }
