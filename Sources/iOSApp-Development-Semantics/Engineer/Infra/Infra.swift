@@ -1,6 +1,13 @@
 import Elo_Itself
 import Elo
 
+struct Alogs: Infra {
+    let items = [
+        "Hashing",
+        "RandomNumber"
+    ]
+}
+    
 struct Documentation_and_QACommunity: Infra, Has_Criterias {
     var criterias: [Any] = {
         var tmp = [String]()

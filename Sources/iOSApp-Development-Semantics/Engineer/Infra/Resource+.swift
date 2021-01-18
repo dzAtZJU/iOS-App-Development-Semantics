@@ -33,3 +33,7 @@ struct Release_Apple: Resource {
 struct Charles: Tool {}
 
 struct Python_and_Matlab: Tool {}
+
+struct Frontier {
+    let Swift = "https://apple.github.io/swift-evolution/"
+}
