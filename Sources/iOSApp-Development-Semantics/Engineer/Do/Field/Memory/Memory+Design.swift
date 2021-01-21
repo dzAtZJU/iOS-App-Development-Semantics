@@ -1,0 +1,6 @@
+extension Memory {
+    enum Design {
+        
+    }
+}
+

@@ -4,20 +4,6 @@ enum Scrolling {
         case Frame = "16ms"
     }
     
-    enum Tasks {
-        case ReturnCell
-        case LayoutSubviews
-        case Draw
-        
-        enum LayoutSubviews {
-            case MeasureTexts
-        }
-        
-        enum Draw {
-            case DrawTexts
-        }
-    }
-    
     enum Strategy {
         case Prefetch
         case CPUPerformanceController

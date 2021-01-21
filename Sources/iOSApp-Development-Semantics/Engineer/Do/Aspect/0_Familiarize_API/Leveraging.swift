@@ -22,7 +22,5 @@ enum Leveraging {
         case OptimisticDNS
     }
     // TLS1.3 -> 1 round trip
-    
-    enum NSCache {}
 }
 

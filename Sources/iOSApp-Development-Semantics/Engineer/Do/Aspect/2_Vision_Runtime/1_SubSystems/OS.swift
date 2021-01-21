@@ -1,5 +1,8 @@
 enum OS {
     case Networking
+    case KernelSpace
+    case UserSpace
+    case Daemon
     
     enum Runtime {
         case Periodically
@@ -15,5 +18,10 @@ enum OS {
         case MemoryMappedChannel
         case Interface
         case Driver
+    }
+    
+    enum Communicaion {
+        case XPC
+        case Source
     }
 }
