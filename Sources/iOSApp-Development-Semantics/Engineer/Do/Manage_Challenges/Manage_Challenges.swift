@@ -6,18 +6,34 @@ enum Manage_Challenges {
         case BatteryLife
         case Metal
         case Media
-        case Debug
-        case Test
         case Benchmark
         
         enum UI {
             enum Layout {
                 case AutoLayout
             }
+            case Adaptive
+            case Animation
+        }
+        
+        enum Networking {
+            
+        }
+        
+        enum Test {
+            
+        }
+        
+        enum Profile {
+            
         }
         
         enum Performance {
             case Accelerate
+        }
+        
+        enum Debug {
+            
         }
     }
 }

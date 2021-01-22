@@ -10,20 +10,7 @@ enum CPU {
             case HeatControl
             
             enum Tuning {
-                enum QoS {
-                    case UserInteractive = "Actively frame updating"
-                    case UserInitiated = "Required for user to continue meaningfully; Loading results from user action"
-                    case Utility = "Not preventing user from continuing meaningfully; User is aware of progress"
-                    case Background = "User is not aware"
-                    
-                    enum PriorityInversion {
-                        enum SerialQueue {
-                            case Async = "QoS_raised_for_tasks_before_new_high_qos_task"
-                            case Sync = "QoS_raised_for_threads_before_new_high_qos_thread"
-                            case dispatch_block_wait
-                        }
-                    }
-                }
+                case QoS
             }
         }
         

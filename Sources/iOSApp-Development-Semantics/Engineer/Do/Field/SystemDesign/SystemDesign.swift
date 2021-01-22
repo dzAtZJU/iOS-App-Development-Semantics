@@ -1,4 +1,4 @@
-enum Optimize {
+enum SystemDesign {
     enum Strategy {
         case Avoid_Unnecessary
         case Minimize_Work
@@ -12,7 +12,6 @@ enum Optimize {
         case Businesscontrol
         
         enum Caching {
-            
             enum Candidate {
                 case Frequent_wites
                 case Expensive_read
@@ -23,7 +22,9 @@ enum Optimize {
             }
             
             enum Tradeoff {
+                case CPU
                 case Memory
+                case IO
             }
             
             enum Technology {

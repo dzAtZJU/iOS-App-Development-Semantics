@@ -1,15 +1,7 @@
 enum Memory {
-    enum Metric {
-        case UseOnSuspension
-        
-        enum Peak {
-            case Dirty
-            case Compressed
-        }
-    }
-    
     enum Runtime {
-        case Compressor
+        case Compressor = "instead of swap"
+        case Reclaiming = "takes time"
     }
     
     enum Structure {
@@ -19,17 +11,30 @@ enum Memory {
         }
         
         enum Page { // "16KB"
-            case Clean
-            case Dirty
+            case Dirty = "Written"
             case Compressed
             
+            enum Dirty {
+                case Framework_DATA
+                case Framework_DATA_DIRTY
+            }
+            
             enum Clean {
-                enum Operation {
-                    enum PageOut {
-                        enum Format {
-                            case MemoryMappedFiles
+                case Allocated_but_not_Written
+                
+                enum ReadOnly_MemoryMappedFiles {
+                    case ImageFile
+                    case DataBlobs
+                    
+                    enum Framework_DATA_CONST {
+                        enum Avoid {
+                            case Swizzling
                         }
                     }
+                }
+                
+                enum Operation {
+                    case PageOut
                 }
             }
         }
@@ -38,5 +43,9 @@ enum Memory {
             case Pointer
             case Value
         }
+    }
+    
+    enum Affects {
+        case IO
     }
 }

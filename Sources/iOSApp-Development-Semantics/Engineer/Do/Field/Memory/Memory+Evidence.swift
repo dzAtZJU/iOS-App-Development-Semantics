@@ -1,4 +1,8 @@
 extension Memory {
+    
+    
+    // wwdc14 improving your app with instruments
+    // https://developer.apple.com/videos/play/wwdc2018/416/
     enum Profile {
         enum GatherInformation {
             enum MemoryDebugger {

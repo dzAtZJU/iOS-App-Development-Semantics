@@ -1,26 +1,6 @@
 enum Threading {
     case Competing
     
-    enum Explosion {
-        case ExeceedLimit = "Dead lock"
-        
-        enum Design {
-            case Use_asyn_api_especially_for_IO
-            case Dont_generate_unlimited_work
-            
-            enum Queue {
-                case Use_serial_queue_at_first
-                
-                enum Parallel_for_some_peaces_of_work {
-                    case ConcurrentQueue
-                    case NSOperationQueueMaxOperationCount
-                    case DispatchApply
-                    case DispatchSemaphore
-                }
-            }
-        }
-    }
-    
     enum GCDThreadPool {
         enum Thread {
             enum Operation {
@@ -36,16 +16,34 @@ enum Threading {
                     enum Causation {
                         case IO
                         case Lock
+                        case SysCall
                     }
                 }
             }
         }
     }
     
-    enum Synchronization {
-        case Waiting_a_block
-        case dispatch_barrier
+    enum Safety {
+        case Resitrited_to_main_thread
+        case One_thread_a_time
         
+        enum Swift {
+            case Global_variables_are_initialized_atomically
+            case Class_properties_are_not_atomic
+            case Lazy_properties_are_not_initialized_atomically
+        }
+    }
+    
+    enum Synchronization {
+        case Waiting_a_DispatchWorkItem
+        case dispatch_barrier
+        case DispatchGroup = "No priority inversion"
+        
+        enum MutualExclusion {
+            case SubsystemSerialQueue_DispatchSync
+        }
+        
+        // wwdc16 Concurrent Programming With GCD in Swift 3
         enum Lock {
             case DispatchSemaphore = "No priority inversion"
 
@@ -58,12 +56,14 @@ enum Threading {
             enum UnFair {
                 case os_unfair_lock
             }
-            
-            enum AbusePattern {
-                enum LockContention {
-                    case FairLock
-                }
-            }
+        }
+    }
+    
+    enum PriorityInversion {
+        enum SerialQueue {
+            case Async = "QoS_raised_for_tasks_before_new_high_qos_task"
+            case Sync = "QoS_raised_for_threads_before_new_high_qos_thread"
+            case dispatch_block_wait
         }
     }
 }
