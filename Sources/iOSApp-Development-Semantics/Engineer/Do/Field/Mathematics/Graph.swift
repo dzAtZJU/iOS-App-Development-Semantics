@@ -1,0 +1,3 @@
+enum Graph {
+    case Cycle
+}

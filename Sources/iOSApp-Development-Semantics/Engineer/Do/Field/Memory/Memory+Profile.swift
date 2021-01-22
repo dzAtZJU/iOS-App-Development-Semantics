@@ -43,6 +43,10 @@ extension Memory {
                         case MallocStack = ["malloc_history -callTree xxx.memgraph address"]
                     }
                 }
+                
+                enum Timeline {
+                    case Instruments_Allocations
+                }
             }
         }
     }
