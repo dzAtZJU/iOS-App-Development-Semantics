@@ -47,3 +47,10 @@ protocol action: prioritize {
     var `do` {get}
     var `talk` {get}
 }
+
+enum 项目 {
+    case 喜欢的
+    case 相关的
+    case Idea足够大
+    case Feature足够小
+}

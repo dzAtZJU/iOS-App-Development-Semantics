@@ -1,26 +1,22 @@
 enum Launch {
-    enum System_Work {
+    enum Characteristic {
+        case Init
+        enum Quick {
+            case Interactive = "400ms"
+            case Full_Frame = "600ms"
+        }
+    }
+    
+    enum SystemWork {
         case DYLD
         case LibSystem_Init
-        case OC_Runtime_Init
+        case OC_Runtime_Init = "class static load"
         case Swift_Runtime_Init // https://swift.org/blog/abi-stability-and-more/
-        case UIKit_Init
+        case UIKit_Init = "setup event processing and integration with system"
         case FirstFrameRender
     }
     
-    enum App_Work {
-        case App_Lifecycle
-        case UI_Lifecycle
-    }
-    
-    enum Condition {
-        case Interactive = "400ms"
-        case Full_Frame = "600ms"
-    }
-    
     enum Technology {
-        case Dyld
-        
         enum Dyld3 {
             case LaunchClosure
             
@@ -40,23 +36,4 @@ enum Launch {
             }
         }
     }
-    
-    enum Profile {
-        enum Technology {
-            case Instrument = "StaticInitializerTracing"
-        }
-    }
 }
-
-enum OC_Runtime_Init {
-    case Class_Static_Load
-}
-
-enum UIKit_Init {
-    case Setup__Event_Processing__Integration_With_System
-}
-
-enum Viewhierarchies {
-    case Flatten
-}
-

@@ -7,8 +7,11 @@ extension Memory {
         }
         
         enum Unload_when_cant_see {
-            case AppLifeCycle
-            enum VCLifeCycle
+            case AppLifeCycle_Notification
+            
+            enum VCLifeCycle {
+                case Example = "off-screen vcs in UITabBarController and UINavigationController"
+            }
         }
             
         enum Low_on_suspension {
