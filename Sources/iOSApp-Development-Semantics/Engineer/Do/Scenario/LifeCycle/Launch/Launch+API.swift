@@ -1,10 +1,13 @@
 extension Launch {
     enum API {
-        enum Event {
+        enum App {
             case willFinishLaunching
             case StateRestoration
             case didFinishLaunching
-            case didFinishLaunchingNotification
+        }
+        
+        enum Scene {
+            case sceneWillConnectTo
             case sceneWillEnterForeground
             case sceneDidBecomeActive
         }

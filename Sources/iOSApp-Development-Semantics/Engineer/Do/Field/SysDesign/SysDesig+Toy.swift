@@ -1,6 +1,21 @@
 extension SystemDesign {
     enum Toy {
         enum UIX {
+            case Quiet
+            case Stop_Interaction
+            case Decrease_FrameRate
+            case Pause_Game
+            case Stop_Update_Interface
+            enum Pause_OnGoing_Task {
+                case Disable_Timer
+            }
+            case Save_User_Data
+            
+            
+            case Reduce_Memory_Usage
+            case Free_Shared_Resource
+            
+            
             enum DataModel {
                 case Init
                 case Update
@@ -8,6 +23,10 @@ extension SystemDesign {
             }
             
             enum ViewHierarchy {
+                case Update
+            }
+            
+            enum ViewContent {
                 case Update
             }
             
@@ -25,6 +44,7 @@ extension SystemDesign {
         enum Work {
             case OneTimeSetup
             case Task
+            case Load
             
             enum Service {
                 enum Operation {

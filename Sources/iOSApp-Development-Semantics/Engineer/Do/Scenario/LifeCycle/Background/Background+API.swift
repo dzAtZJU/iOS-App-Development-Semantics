@@ -1,8 +1,9 @@
 extension Background {
     enum API {
-        enum Event {
+        enum Scene {
             case sceneWillResignActive
             case sceneDidEnterBackground
+            case sceneDidDisConnect
         }
     }
 }
